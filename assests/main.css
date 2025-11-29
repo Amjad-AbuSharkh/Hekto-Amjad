@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+:root {
+    --text-primary : "Josefin Sans", sans-serif;
+    --text-secondary : "Lato", sans-serif;
+    --color-primary : #FB2E86;
+    --color-secondary : #1A0B5B;
+    --color-navbar : #0D0E43;
+    --color-paragraph : #151875;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    margin: 0px 15px;
+    text-transform: capitalize;
+}
+.head .lists .list {
+    display: flex;
+    gap: 20px;
+}
+.form input,button {
+    border: none;
+    outline: none;
+}
+.form {
+    border: 1px solid black;
+}
+.form button {
+    background-color: var(--color-primary);
+}
+.lists .list li a {
+    color: var(--color-navbar);
+}
+.lists .list li .active {
+    color: var(--color-primary);
+}
