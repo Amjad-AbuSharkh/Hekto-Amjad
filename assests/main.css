@@ -9,6 +9,11 @@
     --nav-color : #0D0E43;
     --main-font : "Lato", sans-serif;
     --secondary-font : "Josefin Sans", sans-serif;
+    --secondary-color : #151875;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
 }
 a {
     text-decoration: none;
@@ -21,9 +26,9 @@ ul {
     margin: 0 auto;
 }
 .header {
-    position: fixed;
+   /*position: fixed;*/
     padding: 30px;
-    background-color: #8A8FB9;
+    background-color: #8a8fb912;
     width: 100%;
     top: 0;
 }
@@ -140,3 +145,76 @@ ul {
         gap: 30px;
     }
 }
+h1 {
+    color: #1A0B5B;
+    font-family: var(--secondary-font);
+}
+.cards {
+   text-align: center;
+    padding: 30px;
+}
+.cards .contanier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards .product {
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.15);
+}
+.cards .product .img {
+    padding: 30px;
+    background-color: #F6F7FB;
+}
+.cards .product h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+.cards .product .colors {
+    margin-bottom: 10px;
+}
+.cards .contanier .product .colors button {
+    width: 30px;
+    height: 5px;
+    outline: none;
+    border: none;
+}
+.cards .product .colors .color-one {
+    background-color: #05E6B7;
+}
+.cards .product .colors .color-two {
+    background-color: #F701A8;
+}
+.cards .product .colors .color-three {
+    background-color: #00009D;
+}
+.cards .product .colors button {
+    width: 10px;
+    border-radius: 10px;
+}
+.cards .product .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+}
+.newslater {
+    background-image: url(./image/product/background.png);
+    background-size: cover;
+    padding: 30px;
+    margin-top: 30px;   
+}
+.newslater .contanier {
+    text-align: center;
+}
+.newslater .contanier .details button {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    color: white;
+}
+
