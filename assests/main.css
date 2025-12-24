@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-transform: capitalize;
+
 }
 :root {
     --main-color : #FB2E86;
@@ -24,6 +25,11 @@ ul {
 .contanier {
     width: 80%;
     margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .header {
    /*position: fixed;*/
@@ -75,6 +81,93 @@ ul {
     .header .contanier .menu{
         display: block;
     }
+}
+.hero {
+    padding: 30px;
+    background-color: #F2F0FF;
+}
+.hero .contanier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero .contanier .left-side {
+    /* بحاجة الى توضيح */
+       width: calc(100% /2);
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+}
+.hero .contanier .left-side span {
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+.hero .contanier .left-side h3 {
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    font-size: 50px;
+}
+.hero .contanier .left-side p {
+    color: #8A8FB9;
+}
+.hero .contanier .left-side button {
+    width: fit-content;
+    padding: 5px 20px;
+    color: white;
+    background-color:var(--main-color);
+    outline: none;
+    border: none;
+}
+.hero .contanier .right-side .img img {
+    max-width: 100%;
+    background-image: url(./image/product/backhero.png);
+}
+.hero .contanier .right-side .img {
+    position: relative;
+}
+.hero .contanier .right-side .img::after {
+    content: "50% off";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #00C1FE;
+    color: white;
+    font-size: 26px;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    text-align: center;
+}
+@media screen and (max-width:1440px) {
+    .hero .contanier .left-side {
+        width: 100%;
+    }
+    .hero .contanier {
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:425px) {
+    .hero .contanier {
+        gap: 30px;
+    }
+     .hero .contanier .left-side {
+        align-items: center;
+     }
+     .hero .contanier .right-side .img::after  {
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+        top: 0;
+        right: 0;
+     }
 }
 .footer {
     width: 100%;
@@ -160,7 +253,7 @@ h1 {
 }
 .cards .product {
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.15);
-    width: 238px;
+    /*width: 238px;*/
 }
 .cards .product .img {
     padding: 30px;
