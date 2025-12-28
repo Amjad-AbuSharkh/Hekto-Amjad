@@ -273,6 +273,7 @@ ul {
     .featured-product .contanier .row .product {
         width: calc((100% - 40px) /3);
     }
+
     .featured-product .contanier .row .grow {
         flex-grow: 1;
     }
@@ -326,8 +327,9 @@ ul {
 .Leatest-products .contanier .row .product-two .img {
     background-color: white;
 }
-.Leatest-products .contanier .row .product .img img  {
-      max-width: 100%;
+
+.Leatest-products .contanier .row .product .img img {
+    max-width: 100%;
 }
 
 
@@ -344,15 +346,76 @@ ul {
     .Leatest-products .contanier .row .product {
         width: 100%;
     }
-        .Leatest-products .contanier .row .lists ul {
-            flex-direction: column;
-            gap: 15px;
-        }
+
+    .Leatest-products .contanier .row .lists ul {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
     .Leatest-products .contanier .row .product {
         width: calc((100% - 20px) /2);
+    }
+}
+
+.support {
+    padding: 30px;
+    text-align: center;
+    background-color: #f6f7fb8a;
+}
+
+.support h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+}
+
+.support .contanier .row .item {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    width: calc((100% - 15px) /2);
+}
+
+.support .contanier .row .item .img {
+    height: 69px;
+    display: flex;
+    align-items: center;
+}
+/*الصورة ما بتتمدد مع كل الشاشات */
+.support .contanier .row .item .img img {
+    max-width: 100%;
+}
+
+.support .contanier .row .item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding: 0px 15px;
+}
+
+.support .contanier .row .item .info h3 {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+}
+
+.support .contanier .row .item .info p {
+    color: #1a0b5b7d;
+}
+
+@media screen and (max-width: 1023px) {
+    .support .contanier .row .item {
+        width: 100%;
     }
 }
 
