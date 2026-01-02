@@ -124,11 +124,22 @@ ul {
     margin-top: 100px;
 }
 
+@keyframes move-leftside {
+    from {
+        transform: translateX(-130%);
+    }
+
+    to {
+        transform: translate(0%);
+    }
+}
+
 .hero .contanier .row .left-side {
     width: calc(80% / 2);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: move-leftside 3s linear 1s alternate;
 }
 
 .hero .contanier .row .left-side span {
@@ -154,6 +165,20 @@ ul {
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+@keyframes move-rightside {
+    from {
+        transform: translateX(130%);
+    }
+
+    to {
+        transform: translate(0%);
+    }
+}
+
+.hero .contanier .row .right-side {
+    animation: move-rightside 3s linear 1s alternate;
 }
 
 .hero .contanier .row .right-side .img img {
