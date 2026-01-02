@@ -185,14 +185,6 @@ ul {
     text-align: center;
 }
 
-@media screen and (max-width:1370px) {
-    .hero .contanier .left-side {
-        display: flex;
-        flex: 1;
-    }
-
-}
-
 @media screen and (max-width:1024px) {
     .hero .contanier .left-side {
         display: flex;
@@ -215,6 +207,14 @@ ul {
     }
 }
 
+@media screen and (max-width:1370px) {
+    .hero .contanier .left-side {
+        display: flex;
+        flex: 1;
+    }
+
+}
+
 .featured-product {
     padding: 30px;
     text-align: center;
@@ -224,6 +224,8 @@ ul {
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.15);
     margin-top: 30px;
     width: calc((100% - 60px) /4);
+    position: relative;
+    transition: all 0.8s;
 }
 
 .featured-product .contanier .row .product .img {
@@ -277,6 +279,54 @@ ul {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     margin-bottom: 10px;
+}
+
+.featured-product .contanier .row .product .icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.featured-product .contanier .row .product .icons img {
+    display: none;
+}
+
+.featured-product .contanier .row .product .view button {
+    position: absolute;
+    bottom: 140px;
+    left: 100px;
+    padding: 5px 30px;
+    background-color: #08D15F;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+
+.featured-product .contanier .row .product .view button a {
+    color: white;
+}
+
+.featured-product .contanier .row .product:hover .view button,
+.featured-product .contanier .row .product:hover .icons img {
+    display: block;
+}
+
+.featured-product .contanier .row .product:hover .info {
+    background-color: #2F1AC4;
+}
+
+.featured-product .contanier .row .product:hover .info h2,
+/*شو السبب انو ال btn الثالث ما اتغير لونو؟*/
+.featured-product .contanier .row .product:hover .colors .color-three,
+.featured-product .contanier .row .product:hover .info .details {
+    color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -367,6 +417,31 @@ ul {
 
 .Leatest-products .contanier .row .product {
     width: calc((100% - 40px) /3);
+    position: relative;
+}
+
+.Leatest-products .contanier .row .product .sale {
+    position: absolute;
+    display: none;
+}
+
+.Leatest-products .contanier .row .product .icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 45px;
+    left: 10px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.Leatest-products .contanier .row .product .icons img {
+    display: none;
+}
+
+.Leatest-products .contanier .row .product:hover .sale,
+.Leatest-products .contanier .row .product:hover .icons img {
+    display: block;
 }
 
 @media screen and (max-width: 600px) {
@@ -570,6 +645,7 @@ ul {
 
 .top-categories .contanier .row .product {
     width: calc((100% - 60px) /4);
+    position: relative;
 }
 
 .top-categories .contanier .row .product .img {
@@ -593,6 +669,43 @@ ul {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+}
+
+.top-categories .contanier .row .product .view button {
+    position: absolute;
+    bottom: 75px;
+    left: 80px;
+    padding: 5px 30px;
+    background-color: #08D15F;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.top-categories .contanier .row .product .view button a {
+    color: white;
+}
+
+.top-categories .contanier .row .product::before {
+    content: "";
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: #9877E7;
+    position: absolute;
+    z-index: -1;
+    right: 40px;
+    top: 5px;
+    opacity: 0;
+}
+
+.top-categories .contanier .row .product:hover::before,
+.top-categories .contanier .row .product:hover .view button {
+    opacity: 1;
+    display: block;
 }
 
 @media screen and (max-width: 600px) {
@@ -650,6 +763,7 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
 /*ما زبطت معي بالميديا ؟؟*/
 .newslater h2 {
     font-size: 32px;
@@ -735,10 +849,12 @@ ul {
         width: calc((100% - 20px) /2);
         margin-bottom: 20px;
     }
+
     .leatest-blog .contanier .row .grow {
         flex-grow: 1;
     }
 }
+
 @media (min-width: 950px) and (max-width: 2550px) {
     .leatest-blog .contanier .row .item {
         width: calc((100% - 40px) /3);
@@ -821,4 +937,3 @@ ul {
         margin-top: 30px;
     }
 }
-
